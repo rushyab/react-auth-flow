@@ -1,16 +1,15 @@
-import React, { useContext } from "react";
-import logo from "../../logo.svg";
-// import "./App.css";
-import { authContext } from "../../context/AuthContext";
+import React from "react";
 import Routes from "../../layouts/Routes";
+import AlertContextProvider from "../../context/AlertContext";
+import Alert from "../CommonComponents/Alert";
 
 function App() {
-  const { auth } = useContext(authContext);
-  console.log(auth);
-
   return (
     <div className="App">
-      <Routes />
+      <AlertContextProvider>
+        <Alert />
+        <Routes />
+      </AlertContextProvider>
     </div>
   );
 }

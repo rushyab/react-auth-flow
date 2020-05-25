@@ -7,6 +7,7 @@ interface PublicRouteProps {
   restricted: boolean;
   children: ReactNode;
   path: string;
+  [key: string]: any;
 }
 
 export function PublicRoute(props: PublicRouteProps) {
