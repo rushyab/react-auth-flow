@@ -8,7 +8,7 @@ export function LandingPage() {
   function AddAlert() {
     count % 2 === 0
       ? addAlert("This is a success message", "success")
-      : addAlert("This is an error message", "danger");
+      : addAlert("This is a error message", "danger");
     setCount(count + 1);
   }
   return (

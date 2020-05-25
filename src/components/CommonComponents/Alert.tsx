@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AlertInterface, alertContext } from "../../context/AlertContext";
 
-const TOP = 6;
+const TOP_OFFSET = 6;
 
 const Alert = () => {
   const { alerts } = useContext(alertContext);
@@ -14,10 +14,8 @@ const Alert = () => {
             style={{
               width: "60%",
               position: "fixed",
-              top: `${TOP * (index * 1.25 + 1)}%`,
+              top: `${TOP_OFFSET * (index * 1.25 + 1)}%`,
               zIndex: 1000,
-              // left: "50%",
-              // marginLeft: "-37.5%",
               left: "50%",
               transform: "translate(-50%, 0)",
             }}
